@@ -6,12 +6,13 @@ using UnityEngine.UI;
 namespace AlbeRt.Global.Utils
 {
     [RequireComponent(typeof(Canvas))]
-    public class BookFlipEffect: MonoBehaviour
+    public class BookFlipEffect : MonoBehaviour
     {
         public enum FlipDirection
         {
             RightLeft, LeftRight
         }
+        public enum DragPosition { LEFT, RIGHT }
 
         [Header("Book Configuration")]
         [SerializeField] private RectTransform _bookPanel;
@@ -28,7 +29,7 @@ namespace AlbeRt.Global.Utils
         [SerializeField] private GameObject _rightPage;
         [SerializeField] private GameObject _nextLeft;
         [SerializeField] private GameObject _nextRight;
-        
+
         private RectTransform GetRectTransform(GameObject go)
         {
             return go.GetComponent<RectTransform>();
@@ -88,6 +89,34 @@ namespace AlbeRt.Global.Utils
         {
             if (_isDraggingPage && _interactable)
                 UpdateBook();
+        }
+        public void OnDragLeft()
+        {
+            OnMouseDragPage(DragPosition.LEFT);
+        }
+        public void OnDragRight()
+        {
+            OnMouseDragPage(DragPosition.RIGHT);
+        }
+
+        public void OnMouseDragPage(DragPosition dragPosition)
+        {
+            print(dragPosition);
+            Vector3 _inputPoint = ToWorldPoint(Input.mousePosition);
+            switch (dragPosition)
+            {
+                case DragPosition.LEFT:
+                    DragPageToPoint(FlipDirection.LeftRight, _inputPoint);
+                    break;
+                case DragPosition.RIGHT:
+                    DragPageToPoint(FlipDirection.RightLeft, _inputPoint);
+                    break;
+            }
+        }
+        public void OnMouseDragRelease()
+        {
+            if (_interactable)
+                ReleasePage();
         }
 
         private void CalculateCriticalCurlPoints()
@@ -217,7 +246,7 @@ namespace AlbeRt.Global.Utils
 
         private Vector3 CalculateCornerPosition(Vector3 followPosition)
         {
-            Vector3 _corner = Vector3.zero;
+            Vector3 _corner;
             float _followSpineBottomAngle = Mathf.Atan2(
                 followPosition.y - _spineBottom.y, followPosition.x - _spineBottom.x);
             float _followSpineBottomDistance = Vector2.Distance(
@@ -262,6 +291,8 @@ namespace AlbeRt.Global.Utils
 
         private void DragPageToPoint(FlipDirection direction, Vector3 point)
         {
+            print(direction);
+            print(point);
             if (_currentPage >= _bookPagePrefabs.Length || 
                 _currentPage <= 0) return;
 
