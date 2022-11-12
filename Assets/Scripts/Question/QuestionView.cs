@@ -1,20 +1,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Gpm.WebView;
 
 namespace AlbeRt.Question
 {
     public class QuestionView : MonoBehaviour
     {
+        [SerializeField] private string _homeSceneName;
         [SerializeField] private string _preTestUrl;
         [SerializeField] private string _postTestUrl;
+        [SerializeField] private Button _backHomeButton;
         [SerializeField] private Button _preTestButton;
         [SerializeField] private Button _postTestButton;
 
         private void OnEnable()
         {
             RemoveAllButtonListeners();
+            _backHomeButton.onClick.AddListener(OnBackHomeButtonClicked);
             _preTestButton.onClick.AddListener(OnPreTestButtonClicked);
             _postTestButton.onClick.AddListener(OnPostTestButtonClicked);
         }
@@ -25,10 +29,15 @@ namespace AlbeRt.Question
 
         private void RemoveAllButtonListeners()
         {
+            _backHomeButton.onClick.RemoveAllListeners();
             _preTestButton.onClick.RemoveAllListeners();
             _postTestButton.onClick.RemoveAllListeners();
         }
 
+        private void OnBackHomeButtonClicked()
+        {
+            SceneManager.LoadScene(_homeSceneName);
+        }
         private void OnPreTestButtonClicked()
         {
             ShowUrlFullScreen(_preTestUrl, "(AlbeRt) PRE-TEST");
