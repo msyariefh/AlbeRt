@@ -14,6 +14,10 @@ namespace AlbeRt.AREnvironment
         private void Awake()
         {
             _trackedImageManager = GetComponent<ARTrackedImageManager>();
+            for (int i = 0; i < _database.Length; i++)
+            {
+                InstantiateNewPrefab(_database.GetObject3D(i));
+            }
 
         }
         private void OnEnable()
@@ -24,6 +28,13 @@ namespace AlbeRt.AREnvironment
         private void OnDisable()
         {
             _trackedImageManager.trackedImagesChanged -= OnImageChanged;
+        }
+
+        private void InstantiateNewPrefab(Object3D object3d)
+        {
+            GameObject _newPrefab = Instantiate(object3d.Object, Vector3.zero, Quaternion.identity);
+            _newPrefab.name = object3d.Name;
+            _spawnedPrefabs.Add(object3d.Name, _newPrefab);
         }
 
         private void InstantiateNewPrefab(string name, GameObject go)
@@ -55,19 +66,19 @@ namespace AlbeRt.AREnvironment
             string _name = trackedImage.referenceImage.name;
             Vector3 _position = trackedImage.transform.position;
 
-            if (!_spawnedPrefabs.ContainsKey(_name))
-            {
-                var _temp = _database.GetObject3D(_name);
-                InstantiateNewPrefab(_temp.Name, _temp.Object);
-            }
+            //if (!_spawnedPrefabs.ContainsKey(_name))
+            //{
+            //    var _temp = _database.GetObject3D(_name);
+            //    InstantiateNewPrefab(_temp.Name, _temp.Object);
+            //}
 
-            GameObject _prefab = _spawnedPrefabs[name];
+            GameObject _prefab = _spawnedPrefabs[_name];
             _prefab.transform.position = _position;
             _prefab.SetActive(true);
 
             foreach(GameObject _go in _spawnedPrefabs.Values)
             {
-                if (_go.name != name)
+                if (_go.name != _name)
                     _go.SetActive(false);
             }
         }

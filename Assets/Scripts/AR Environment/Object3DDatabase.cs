@@ -12,5 +12,10 @@ namespace AlbeRt.AREnvironment
         {
             return Array.Find(_object3DCollections, obj => obj.Name == name);
         }
+        public Object3D GetObject3D(int index)
+        {
+            return _object3DCollections[index];
+        }
+        public int Length => _object3DCollections.Length;
     }
 }
