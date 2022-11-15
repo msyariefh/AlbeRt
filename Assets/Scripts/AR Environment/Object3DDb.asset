@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb3e1e2a7520a641b9d33ae0342da79, type: 3}
+  m_Name: Object3DDb
+  m_EditorClassIdentifier: 
+  _object3DCollections:
+  - _name: ArmCylinder
+    _3dObject: {fileID: 919132149155446097, guid: 6a7d2a858807d424ba1b20476705f24b,
+      type: 3}
+  - _name: BoomCylinder
+    _3dObject: {fileID: 919132149155446097, guid: d204f86dd32e771459e4ac9fa8411dd9,
+      type: 3}
+  - _name: BucketCylinder
+    _3dObject: {fileID: 919132149155446097, guid: 0bd7e24b6d2c4b54d86aa5ef2bf342ab,
+      type: 3}
+  - _name: Cabin
+    _3dObject: {fileID: 951756964938100431, guid: 968c0826422b80843be46f61c6aaa4ad,
+      type: 3}
+  - _name: Bucket
+    _3dObject: {fileID: 919132149155446097, guid: 6be5ccefc003c354f922c59fe48eab68,
+      type: 3}
+  - _name: FrontIdler
+    _3dObject: {fileID: 919132149155446097, guid: 2f900d6215de8a6468fce714d685dfb0,
+      type: 3}
+  - _name: Roller
+    _3dObject: {fileID: 919132149155446097, guid: 00519b1f52ea8a6448e125981ab1fb6e,
+      type: 3}
+  - _name: Sprocket
+    _3dObject: {fileID: 919132149155446097, guid: da49716af7b6cb24ebd63d12d3b128be,
+      type: 3}
+  - _name: TrackFrame
+    _3dObject: {fileID: 919132149155446097, guid: 1465bd2860a81e942a5eab1e76c4a576,
+      type: 3}
+  - _name: TrackShoe
+    _3dObject: {fileID: 919132149155446097, guid: 80b38bb41775c7c438fdbb41d068924c,
+      type: 3}

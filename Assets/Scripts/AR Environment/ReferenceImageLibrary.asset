@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5332749378999572585
+  m_GuidHigh: 16401531462533313439
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5171542713568767479
+      m_GuidHigh: 7174191554413395857
+    m_SerializedTextureGuid:
+      m_GuidLow: 8972538261403679069
+      m_GuidHigh: 10206430839287203930
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: ArmCylinder
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5388757693829970486
+      m_GuidHigh: 6993597032181694600
+    m_SerializedTextureGuid:
+      m_GuidLow: 2843161028798565964
+      m_GuidHigh: 18048947343088501176
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: BoomCylinder
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5361976429640450578
+      m_GuidHigh: 975313831888380836
+    m_SerializedTextureGuid:
+      m_GuidLow: 9215633462389053634
+      m_GuidHigh: 9520352219651507081
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: BucketCylinder
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5306057526186011130
+      m_GuidHigh: 9607299792181926554
+    m_SerializedTextureGuid:
+      m_GuidLow: 7630246161155561550
+      m_GuidHigh: 2842872042090353897
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Bucket
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5495476215655137291
+      m_GuidHigh: 5614470084212401845
+    m_SerializedTextureGuid:
+      m_GuidLow: 15768234830734578660
+      m_GuidHigh: 7654984355799236664
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Cabin
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5470128464287204815
+      m_GuidHigh: 2232427006831421600
+    m_SerializedTextureGuid:
+      m_GuidLow: 12183473634751419320
+      m_GuidHigh: 10437528918736076008
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: FrontIdler
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5119729978086442156
+      m_GuidHigh: 10363315623950399880
+    m_SerializedTextureGuid:
+      m_GuidLow: 14840649114869422657
+      m_GuidHigh: 7094557483799090826
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Roller
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4734821067447597168
+      m_GuidHigh: 9268802095416634757
+    m_SerializedTextureGuid:
+      m_GuidLow: 13579658147143592424
+      m_GuidHigh: 16202915745707480104
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Sprocket
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5515656512552024733
+      m_GuidHigh: 2661266582696566420
+    m_SerializedTextureGuid:
+      m_GuidLow: 11399916221495317298
+      m_GuidHigh: 4987844916656715451
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: TrackFrame
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4766928171562188997
+      m_GuidHigh: 11696628002802029449
+    m_SerializedTextureGuid:
+      m_GuidLow: 11742168455786328370
+      m_GuidHigh: 4723970434163217416
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: TrackShoe
+    m_Texture: {fileID: 0}

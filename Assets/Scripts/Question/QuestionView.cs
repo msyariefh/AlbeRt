@@ -89,6 +89,7 @@ namespace AlbeRt.Question
                     }
                     break;
                 case GpmWebViewCallback.CallbackType.Close:
+                    Screen.orientation = ScreenOrientation.LandscapeLeft;
                     if (error != null)
                     {
                         Debug.LogFormat("Fail to close WebView. Error:{0}", error);
