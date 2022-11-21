@@ -60,19 +60,27 @@ namespace AlbeRt.AREnvironment
                 string _trackedImageName = _trackedImage.referenceImage.name;
                 GameObject _trackedObject = _spawnedPrefabs[_trackedImageName];
 
-                switch (_trackedImage.trackingState)
+                if (_trackedImage.trackingState == TrackingState.Tracking)
                 {
-                    case TrackingState.Tracking:
-                        _trackedObject.SetActive(true);
-                        _trackedObject.transform.position = _trackedImage.transform.position;
-                        break;
-                    case TrackingState.Limited:
-                        continue;
-                    case TrackingState.None:
-                        _trackedObject.SetActive(false);
-                        break;
-
+                    _trackedObject.SetActive(true);
+                    _trackedObject.transform.position = _trackedImage.transform.position;
                 }
+                else
+                {
+                    _trackedObject.SetActive(false);
+                }
+                //switch (_trackedImage.trackingState)
+                //{
+                //    case TrackingState.Tracking:
+                        
+                //        break;
+                //    case TrackingState.Limited:
+                //        continue;
+                //    case TrackingState.None:
+                //        _trackedObject.SetActive(false);
+                //        break;
+
+                //}
             }
         }
 
