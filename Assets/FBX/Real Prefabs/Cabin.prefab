@@ -511,7 +511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3943783057528698047}
   - component: {fileID: -1933948493470246631}
-  - component: {fileID: 5429737431871264616}
+  - component: {fileID: -3819052589663996584}
   m_Layer: 0
   m_Name: Cabin
   m_TagString: Untagged
@@ -559,19 +559,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 4
---- !u!65 &5429737431871264616
-BoxCollider:
+--- !u!114 &-3819052589663996584
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4463332656171707909}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.0656796, y: 2.8349152, z: 1.8380916}
-  m_Center: {x: -0.14831518, y: -0.29277274, z: 0.07851538}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 894d4274e05f21d46ab3fc6084ebb5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upScaleButton: {fileID: 0}
+  _downScaleButton: {fileID: 0}
+  _resetButton: {fileID: 0}
+  _minimumScale: 0.2
+  _maximumScale: 4
+  _steps: 0.2
 --- !u!1 &5122516253319279207
 GameObject:
   m_ObjectHideFlags: 0

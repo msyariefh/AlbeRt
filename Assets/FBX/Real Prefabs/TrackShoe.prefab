@@ -342,7 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7655787529520482847}
   - component: {fileID: -5651264105105278973}
-  - component: {fileID: -5389259274590853044}
+  - component: {fileID: 4578270104451395261}
   m_Layer: 0
   m_Name: TrackShoe
   m_TagString: Untagged
@@ -384,19 +384,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 4
---- !u!65 &-5389259274590853044
-BoxCollider:
+--- !u!114 &4578270104451395261
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7022522074641944741}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 8.103111, y: 1.6778364, z: 1.1147755}
-  m_Center: {x: 0.017274916, y: -0.060877763, z: 0.0067932904}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 894d4274e05f21d46ab3fc6084ebb5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upScaleButton: {fileID: 0}
+  _downScaleButton: {fileID: 0}
+  _resetButton: {fileID: 0}
+  _minimumScale: 0.2
+  _maximumScale: 4
+  _steps: 0.2
 --- !u!1 &7458451764173940556
 GameObject:
   m_ObjectHideFlags: 0

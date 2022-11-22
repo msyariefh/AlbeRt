@@ -427,7 +427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3861043205407045791}
   - component: {fileID: -8005594028218226295}
-  - component: {fileID: 2231907860356802064}
+  - component: {fileID: -9105609107561620096}
   m_Layer: 0
   m_Name: Boom Cylinder
   m_TagString: Untagged
@@ -470,19 +470,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 4
---- !u!65 &2231907860356802064
-BoxCollider:
+--- !u!114 &-9105609107561620096
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4530338625581785637}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 13.293258, y: 2.4715185, z: 1.6283937}
-  m_Center: {x: -0.9922544, y: 0.09989038, z: 0.03180921}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 894d4274e05f21d46ab3fc6084ebb5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upScaleButton: {fileID: 0}
+  _downScaleButton: {fileID: 0}
+  _resetButton: {fileID: 0}
+  _minimumScale: 0.2
+  _maximumScale: 4
+  _steps: 0.2
 --- !u!1 &4915919757947567687
 GameObject:
   m_ObjectHideFlags: 0

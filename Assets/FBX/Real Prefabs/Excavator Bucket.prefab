@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2453096130080086147}
   - component: {fileID: -2018560222010148133}
-  - component: {fileID: 556099807531926245}
+  - component: {fileID: 1707889624415298745}
   m_Layer: 0
   m_Name: Excavator Bucket
   m_TagString: Untagged
@@ -139,19 +139,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 4
---- !u!65 &556099807531926245
-BoxCollider:
+--- !u!114 &1707889624415298745
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2972645419827282489}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.9218037, y: 1.998657, z: 1.6283935}
-  m_Center: {x: 0.22648974, y: 0.3274484, z: 0.03180921}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 894d4274e05f21d46ab3fc6084ebb5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upScaleButton: {fileID: 0}
+  _downScaleButton: {fileID: 0}
+  _resetButton: {fileID: 0}
+  _minimumScale: 0.2
+  _maximumScale: 4
+  _steps: 0.2
 --- !u!1 &4916100145165327285
 GameObject:
   m_ObjectHideFlags: 0

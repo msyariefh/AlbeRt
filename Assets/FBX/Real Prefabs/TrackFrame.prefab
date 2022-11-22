@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7244072420174667563}
   - component: {fileID: 4858515614226443233}
   - component: {fileID: 1364208907432146974}
-  - component: {fileID: 8218734825470595399}
+  - component: {fileID: -6136915871680258554}
   m_Layer: 0
   m_Name: TrackFrame
   m_TagString: Untagged
@@ -98,16 +98,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 4
---- !u!65 &8218734825470595399
-BoxCollider:
+--- !u!114 &-6136915871680258554
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6371492061099084340}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.916014, y: 2.133051, z: 7.4348106}
-  m_Center: {x: 0.3047235, y: -0.069343, z: 0.018740295}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 894d4274e05f21d46ab3fc6084ebb5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upScaleButton: {fileID: 0}
+  _downScaleButton: {fileID: 0}
+  _resetButton: {fileID: 0}
+  _minimumScale: 0.2
+  _maximumScale: 4
+  _steps: 0.2
