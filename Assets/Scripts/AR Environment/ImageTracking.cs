@@ -41,20 +41,7 @@ namespace AlbeRt.AREnvironment
 
         private void OnImageChanged(ARTrackedImagesChangedEventArgs args)
         {
-            //foreach(ARTrackedImage _trackedImage in args.added)
-            //{
-            //    UpdateImage(_trackedImage);
-            //}
-
-            //foreach (ARTrackedImage _trackedImage in args.updated)
-            //{
-            //    UpdateImage(_trackedImage);
-            //}
-
-            //foreach (ARTrackedImage _trackedImage in args.removed)
-            //{
-            //    _spawnedPrefabs[_trackedImage.name].SetActive(false);
-            //}
+            
             foreach (ARTrackedImage _trackedImage in args.updated)
             {
                 string _trackedImageName = _trackedImage.referenceImage.name;
@@ -69,38 +56,9 @@ namespace AlbeRt.AREnvironment
                 {
                     _trackedObject.SetActive(false);
                 }
-                //switch (_trackedImage.trackingState)
-                //{
-                //    case TrackingState.Tracking:
-                        
-                //        break;
-                //    case TrackingState.Limited:
-                //        continue;
-                //    case TrackingState.None:
-                //        _trackedObject.SetActive(false);
-                //        break;
-
-                //}
+                
             }
         }
 
-        // https://forum.unity.com/threads/arfoundation-2-image-tracking-with-many-ref-images-and-many-objects.680518/#post-4915259
-        //private void UpdateImage(ARTrackedImage trackedImage)
-        //{
-        //    string _name = trackedImage.referenceImage.name;
-        //    Vector3 _position = trackedImage.transform.position;
-
-        //    GameObject _prefab = _spawnedPrefabs[_name];
-        //    _prefab.transform.position = _position;
-        //    _prefab.SetActive(true);
-
-        //    foreach(GameObject _go in _spawnedPrefabs.Values)
-        //    {
-        //        if (_go.name != _name)
-        //            _go.SetActive(false);
-        //    }
-        //}
-
-        
     }
 }
