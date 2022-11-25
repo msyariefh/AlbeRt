@@ -342,7 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4861885922313936474}
   - component: {fileID: -25328112020522170}
-  - component: {fileID: -1135945362186707279}
+  - component: {fileID: 3406233714441446388}
   m_Layer: 0
   m_Name: Arm Cylinder
   m_TagString: Untagged
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 4
---- !u!114 &-1135945362186707279
+--- !u!114 &3406233714441446388
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -397,15 +397,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5202558963850069216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894d4274e05f21d46ab3fc6084ebb5e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 05c78ca1a64bdef43af74818c29ebe04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upScaleButton: {fileID: 0}
-  _downScaleButton: {fileID: 0}
-  _resetButton: {fileID: 0}
-  _minimumScale: 0.2
-  _maximumScale: 4
-  _steps: 0.2
 --- !u!1 &5711101829421850059
 GameObject:
   m_ObjectHideFlags: 0

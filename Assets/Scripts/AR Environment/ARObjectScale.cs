@@ -1,4 +1,4 @@
-﻿//using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,22 +11,47 @@ namespace AlbeRt.AREnvironment
         [SerializeField] private Button _downScaleButton;
         [SerializeField] private Button _resetButton;
 
-        //[Header("Indicators")]
-        //[SerializeField] private TMP_Text _indicatorScaling;
+        [Header("Indicators")]
+        [SerializeField] private TMP_Text _indicatorScaling;
 
-        [Header("Up Down Scale constraints")]
+        [Header("Up Down Scale constraints")] 
         [SerializeField] [Range(0.1f, 0.5f)] private float _minimumScale;
         [SerializeField] [Range(1.1f, 10f)] private float _maximumScale;
         [SerializeField] [Range(0.1f, 1.0f)] private float _steps;
 
-        // Local
-        Vector3 _defaultScale;
-        float _scaleFactor;
+        ARObjectScaleData _arObjectData;
 
         private void Awake()
         {
-            _defaultScale = transform.localScale;
-            _scaleFactor = 1f;
+            UpdateScaleIndicatorValue(1.0f);
+            UpdateButtonsInteractable(false);
+        }
+
+        public void ChangeReferenceObject(GameObject obj)
+        {
+            _arObjectData = obj.GetComponent<ARObjectScaleData>();
+            if (_arObjectData != null)
+            {
+                UpdateButtonsInteractable(true);
+                UpdateScaleIndicatorValue(1.0f);
+            }
+            else
+            {
+                UpdateButtonsInteractable(false);
+            }
+        }
+
+        private void UpdateButtonsInteractable(bool current)
+        {
+            _upScaleButton.interactable = current;
+            _downScaleButton.interactable = current;
+            _resetButton.interactable = current;
+        }
+
+        private void UpdateScaleIndicatorValue(float val)
+        {
+            var _temp = $"Scale: {val:.0}x";
+            _indicatorScaling.text = _temp;
         }
 
         private void OnEnable()
@@ -43,37 +68,20 @@ namespace AlbeRt.AREnvironment
         }
         private void OnUpScale()
         {
-            if (_scaleFactor >= _maximumScale)
-                return;
-            if (_scaleFactor + _steps >= _maximumScale)
-                _scaleFactor = _maximumScale;
-            else
-                _scaleFactor += _steps;
-
-            TweenScale();
+            var _scales = _arObjectData.ScaleUp(_steps, _maximumScale);
+            UpdateScaleIndicatorValue(_scales);
         }
         private void OnDownScale()
         {
-            if (_scaleFactor <= _minimumScale)
-                return;
-            if (_scaleFactor - _steps <= _minimumScale)
-                _scaleFactor = _minimumScale;
-            else
-                _scaleFactor -= _steps;
-
-            TweenScale();
+            var _scales = _arObjectData.ScaleDown(_steps, _minimumScale);
+            UpdateScaleIndicatorValue(_scales);
         }
         private void OnReset()
         {
-            _scaleFactor = 1.0f;
-
-            TweenScale();
+            var _scales = _arObjectData.ResetScale();
+            UpdateScaleIndicatorValue(_scales);
         }
 
-        private void TweenScale()
-        {
-            LeanTween.scale(gameObject, _defaultScale * _scaleFactor, .25f);
-        }
     }
 }
 

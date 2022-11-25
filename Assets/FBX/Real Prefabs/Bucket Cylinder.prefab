@@ -508,7 +508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7302150956688881295}
   - component: {fileID: -8436131104222212993}
-  - component: {fileID: -8524010404524286471}
+  - component: {fileID: 5629510401726917587}
   m_Layer: 0
   m_Name: Bucket Cylinder
   m_TagString: Untagged
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 4
---- !u!114 &-8524010404524286471
+--- !u!114 &5629510401726917587
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -559,12 +559,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7934677578722864181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894d4274e05f21d46ab3fc6084ebb5e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 05c78ca1a64bdef43af74818c29ebe04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upScaleButton: {fileID: 0}
-  _downScaleButton: {fileID: 0}
-  _resetButton: {fileID: 0}
-  _minimumScale: 0.2
-  _maximumScale: 4
-  _steps: 0.2

@@ -14,32 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _object3DCollections:
   - _name: ArmCylinder
+    _nameDescription: Arm Cylinder
     _3dObject: {fileID: 5202558963850069216, guid: bcfa2f4618b9a6f47a6702348daf3dc5,
       type: 3}
   - _name: BoomCylinder
+    _nameDescription: Boom Cylinder
     _3dObject: {fileID: 4530338625581785637, guid: 56d67d4d124153f448806c98fd556640,
       type: 3}
   - _name: BucketCylinder
+    _nameDescription: Bucket Cylinder
     _3dObject: {fileID: 7934677578722864181, guid: 1dd4d70a5631fa745a885c3934ef97a1,
       type: 3}
   - _name: Cabin
+    _nameDescription: Cabin
     _3dObject: {fileID: 4463332656171707909, guid: 52aef463c815c6245b3160e3feda2347,
       type: 3}
   - _name: Bucket
+    _nameDescription: Excavator Bucket
     _3dObject: {fileID: 2972645419827282489, guid: dadd348f712f47544910cb345c6e908c,
       type: 3}
   - _name: FrontIdler
+    _nameDescription: Excavator Front Idler
     _3dObject: {fileID: 2284898015137230587, guid: e07527969caa5d149ac14664bda5022c,
       type: 3}
   - _name: Roller
+    _nameDescription: Roller
     _3dObject: {fileID: 2228423186465829429, guid: 35610f24145689e4ca7d6cf0d4ba6da5,
       type: 3}
   - _name: Sprocket
+    _nameDescription: Sprocket
     _3dObject: {fileID: 6333680694132496393, guid: aa3749aafc409e645b841730de9544e0,
       type: 3}
   - _name: TrackFrame
+    _nameDescription: Track Frame
     _3dObject: {fileID: 6371492061099084340, guid: 96ed4c3d49f42734fae847bbe2100885,
       type: 3}
   - _name: TrackShoe
+    _nameDescription: Track Shoe
     _3dObject: {fileID: 7022522074641944741, guid: d39c0ed3d39baf846adacc5f32a3cebc,
       type: 3}

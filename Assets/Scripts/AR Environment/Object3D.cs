@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace AlbeRt.AREnvironment
@@ -8,9 +7,11 @@ namespace AlbeRt.AREnvironment
     class Object3D
     {
         [SerializeField] private string _name;
+        [SerializeField] private string _nameDescription;
         [SerializeField] private GameObject _3dObject;
 
         public string Name => _name;
+        public string Description => _nameDescription;
         public GameObject Object => _3dObject;
     }
 }

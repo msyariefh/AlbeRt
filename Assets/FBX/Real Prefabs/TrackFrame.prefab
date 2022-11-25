@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7244072420174667563}
   - component: {fileID: 4858515614226443233}
   - component: {fileID: 1364208907432146974}
-  - component: {fileID: -6136915871680258554}
+  - component: {fileID: -8818242526000867084}
   m_Layer: 0
   m_Name: TrackFrame
   m_TagString: Untagged
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 4
---- !u!114 &-6136915871680258554
+--- !u!114 &-8818242526000867084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,12 +107,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6371492061099084340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894d4274e05f21d46ab3fc6084ebb5e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 05c78ca1a64bdef43af74818c29ebe04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upScaleButton: {fileID: 0}
-  _downScaleButton: {fileID: 0}
-  _resetButton: {fileID: 0}
-  _minimumScale: 0.2
-  _maximumScale: 4
-  _steps: 0.2

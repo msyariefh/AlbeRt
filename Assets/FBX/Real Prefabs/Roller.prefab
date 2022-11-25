@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1560255070367017103}
   - component: {fileID: -9006954051877618612}
-  - component: {fileID: -2858757593273068276}
+  - component: {fileID: 641133767922957522}
   m_Layer: 0
   m_Name: Roller
   m_TagString: Untagged
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 4
---- !u!114 &-2858757593273068276
+--- !u!114 &641133767922957522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,15 +57,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2228423186465829429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894d4274e05f21d46ab3fc6084ebb5e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 05c78ca1a64bdef43af74818c29ebe04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upScaleButton: {fileID: 0}
-  _downScaleButton: {fileID: 0}
-  _resetButton: {fileID: 0}
-  _minimumScale: 0.2
-  _maximumScale: 4
-  _steps: 0.2
 --- !u!1 &2347696315544895844
 GameObject:
   m_ObjectHideFlags: 0

@@ -342,7 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7655787529520482847}
   - component: {fileID: -5651264105105278973}
-  - component: {fileID: 4578270104451395261}
+  - component: {fileID: 9044912028401711747}
   m_Layer: 0
   m_Name: TrackShoe
   m_TagString: Untagged
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 4
---- !u!114 &4578270104451395261
+--- !u!114 &9044912028401711747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393,15 +393,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7022522074641944741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894d4274e05f21d46ab3fc6084ebb5e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 05c78ca1a64bdef43af74818c29ebe04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upScaleButton: {fileID: 0}
-  _downScaleButton: {fileID: 0}
-  _resetButton: {fileID: 0}
-  _minimumScale: 0.2
-  _maximumScale: 4
-  _steps: 0.2
 --- !u!1 &7458451764173940556
 GameObject:
   m_ObjectHideFlags: 0
