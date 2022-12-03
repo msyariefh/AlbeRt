@@ -6,12 +6,22 @@ namespace AlbeRt.AREnvironment
     {
         Vector3 _defaultScale;
         float _scaleFactor;
+        //bool _isActive;
+        //public bool IsObjectActive => _isActive;
 
         private void Awake()
         {
             _defaultScale = transform.localScale;
             _scaleFactor = 1.0f;
         }
+        //private void OnEnable()
+        //{
+        //    _isActive = true;
+        //}
+        //private void OnDisable()
+        //{
+        //    _isActive = false;
+        //}
 
         /// <summary>
         /// Scale Up an AR Object that being tracked/ visible in the scene.
@@ -63,6 +73,11 @@ namespace AlbeRt.AREnvironment
         {
             _scaleFactor = 1.0f;
             TweenScale();
+            return _scaleFactor;
+        }
+
+        public float GetCurrentScale()
+        {
             return _scaleFactor;
         }
 

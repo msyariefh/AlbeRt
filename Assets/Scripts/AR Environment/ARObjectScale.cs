@@ -29,11 +29,15 @@ namespace AlbeRt.AREnvironment
 
         public void ChangeReferenceObject(GameObject obj)
         {
-            _arObjectData = obj.GetComponent<ARObjectScaleData>();
+            var _temp = obj.GetComponent<ARObjectScaleData>();
+            if (_temp == _arObjectData)
+                return;
+            _arObjectData = _temp;
             if (_arObjectData != null)
             {
                 UpdateButtonsInteractable(true);
-                UpdateScaleIndicatorValue(1.0f);
+                UpdateScaleIndicatorValue(_arObjectData.GetCurrentScale());
+                //UpdateScaleIndicatorValue(1.0f);
             }
             else
             {
@@ -68,18 +72,29 @@ namespace AlbeRt.AREnvironment
         }
         private void OnUpScale()
         {
+            if (!CheckActive())
+                return;
             var _scales = _arObjectData.ScaleUp(_steps, _maximumScale);
             UpdateScaleIndicatorValue(_scales);
         }
         private void OnDownScale()
         {
+            if (!CheckActive())
+                return;
             var _scales = _arObjectData.ScaleDown(_steps, _minimumScale);
             UpdateScaleIndicatorValue(_scales);
         }
         private void OnReset()
         {
+            if (!CheckActive())
+                return;
             var _scales = _arObjectData.ResetScale();
             UpdateScaleIndicatorValue(_scales);
+        }
+
+        private bool CheckActive()
+        {
+            return _arObjectData.isActiveAndEnabled;
         }
 
     }

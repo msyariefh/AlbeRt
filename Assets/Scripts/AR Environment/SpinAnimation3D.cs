@@ -12,6 +12,16 @@ namespace AlbeRt.AREnvironment
             _rotateSpeed = _rotationSpeed;
         }
 
+        public void StopSpinning()
+        {
+            _rotateSpeed = 0f;
+        }
+
+        public void RestartSpinning()
+        {
+            _rotateSpeed = _rotationSpeed;
+        }
+
         private void Update()
         {
             transform.Rotate(Vector3.up, Time.deltaTime * _rotateSpeed * 10f);
